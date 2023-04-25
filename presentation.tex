@@ -43,7 +43,7 @@
 \begin{frame}
 \frametitlecounted{Ներածություն}
 
-Անտենաները կարևոր դեր են խաղում հեռահաղորդակցման ոլորտում, հնարավորություն տալով հաղորդել և ընդունել էլեկտրամագնիսական ալիքներ։
+Անտենաները կարևոր դեր են խաղում հեռահաղորդակցության ոլորտում, հնարավորություն տալով հաղորդել և ընդունել էլեկտրամագնիսական ալիքներ։
 
 \begin{figure}[ht]
   \centering
@@ -81,13 +81,47 @@
 \begin{itemize}
     \item Սկանավորման տեխնիկա՝
         \begin{itemize}
-            \item Սկանավորող ջերմային մանրադիտակ (Scanning thermal microscope (SThm))
+            \item Սկանավորող ջերմային մանրադիտակ (Scanning thermal microscope (SThM))
             \item Մերձադաշտի սկանավորման օպտիկական մանրադիտակ (Near-field scanning optical microscope (NSOM))
         \end{itemize}
     \item Ջերմաառաձգական օպտիկական ինդիկատորով մանրադիտակ (ՋԱՕԻՄ)
 \end{itemize}
 
 \end{frame}
+
+\resetCountingSlides{2}
+
+\begin{frame}
+\frametitlecounted{Առավելություններ և թերություններ}
+    Սկանավորման տեխնիկայի առավելություններն են՝
+    \begin{itemize}
+        \item Մեծ տարածական լուծունակություն
+    \end{itemize}
+    Սկանավորման տեխնիկայի թերություններն են՝
+    \begin{itemize}
+        \item Պահանջում են թանկ և բարդ հասանելի նյութեր և սարքեր
+        \item Չափումների խիստ պայմաններ
+        \item Չափումների դանդաղ տևողություն
+        \item SThM֊ը պահանջում է հպում չափվող նմուշի հետ
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitlecounted{Առավելություններ և թերություններ}
+    ՋԱՕԻՄ֊ի առավելություններն են՝
+    \begin{itemize}
+        \item Մեծ տարածական լուծունակություն
+        \item Մեծ ջերմային զգայունություն
+        \item Պահանջվող սարքերը թանկ չեն և հեշտ հասանելի
+        \item Չափումների արագ տևողություն
+        \item Աշխատում է առանց չափվող նմուշի հետ հպվելու
+    \end{itemize}
+    ՋԱՕԻՄ֊ի թերություններն են՝
+    \begin{itemize}
+        \item Ալիքների չափման հաճախային տիրույթը սահմանափակված է միկրոալիքային տիրույթում
+    \end{itemize}
+\end{frame}
+
 
 \resetCountingSlides{4}
 
@@ -132,16 +166,16 @@
 \begin{frame}
 \frametitlecounted{ՋԱՕԻՄ}
     {\fontsize{10}{10} \selectfont Էլեկտրամագնիսական դաշտի կորուստները՝ \\
-    էլեկտրական դաշտի համար դիէլեկտրիկ միջավայրում՝}
+    դիէլեկտրիկ միջավայրում էլեկտրական դաշտի համար՝}
     \begin{flalign*}
     q &= \frac{\omega}{2} \varepsilon'' |E|^2,
     \end{flalign*} \\
-    {\fontsize{10}{10} \selectfont մագնիսական դաշտի համար հաղորդիչ միջավայրում՝}
+    {\fontsize{10}{10} \selectfont հաղորդիչ միջավայրում մագնիսական դաշտի համար՝}
     \begin{flalign*}
         q &= \frac{P_{av}}{V} = \frac{R_s}{2t}|H_t|^2, \\
     \label{eq:TD_vs_Ht}
     P_{av} &= \int\frac{R_s}{2}|H_t|^2dS, \\
-    R_s &= \sqrt{\frac{\omega \mu}{2\sigma}} = \frac{1}{\sigma \delta_s},
+    R_s &= \sqrt{\frac{\omega \mu}{2\sigma}} = \frac{1}{\sigma \delta_s}:
     \end{flalign*}
     
 \end{frame}
@@ -271,6 +305,30 @@
     \end{minipage}
 \end{figure}
 
+\end{frame}
+
+
+\begin{frame}
+\frametitlecounted{Փորձի արդյունքները}
+
+{\fontsize{10}{10} \selectfont Ամեն մուտքային հաճախության համար միջինացված ինտենսիվության կախումը հաճախությունից՝}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{data/experiment-results/free_field_of_antenna_6-14GHz_0-6dBm_generator_output_distance_5mm.png}
+\end{figure}
+
+\end{frame}
+
+\resetCountingSlides{1}
+
+\begin{frame}
+\frametitlecounted{Եզրակացություն}
+    \begin{itemize}
+        \item Հզորության մեծացմանը զուգընթաց դաշտի ինտենսիվությունն աճել է, բայց դաշտի բաշխվածության տեսքը չի փոխվել
+        \item Հաճախության աճմանը զուգընթաց փոխվել է ինչպես դաշտի ինտենսիվությունը, այնպես էլ բաշխվածության տեսքը
+        \item Առավելագույն ինտենսիվությունը գրանցվել է ալիքի 11 ԳՀց հաճախության դեպքում
+    \end{itemize}
 \end{frame}
 
 \end{document}
