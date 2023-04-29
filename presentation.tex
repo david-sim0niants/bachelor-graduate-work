@@ -14,10 +14,14 @@
 \setmainfont{DejaVu Sans}
 \setmathfont{XITS Math}
 
+
 \title{Անտենաների թերությունների և ճառագայթվող էլեկտրամագնիսական դաշտի հետազոտումը ջերմաառաձգական օպտիկական ինդիկատորով մանրադիտակի օգնությամբ}
 \author{Ուսանող՝ Սիմոնյանց Դավիթ}
 \date{}
-\institute{ԵՐԵՎԱՆԻ ՊԵՏԱԿԱՆ ՀԱՄԱԼՍԱՐԱՆ / ՖԻԶԻԿԱՅԻ ԻՆՍՏԻՏՈՒՏ}
+
+\makeatletter
+\renewcommand{\@cite}[1]{\textsuperscript{[#1]}}
+\makeatother
 
 \newcommand{\sectslides}{0}
 \newcounter{currslide}
@@ -35,7 +39,12 @@
 \exhyphenpenalty=10000
 
 \begin{frame}
+\vspace{4mm}
+\begingroup
+    \fontsize{9}{9} \selectfont ԵՐԵՎԱՆԻ ՊԵՏԱԿԱՆ ՀԱՄԱԼՍԱՐԱՆ \\ ՖԻԶԻԿԱՅԻ ԻՆՍՏԻՏՈՒՏ
+\endgroup
 \titlepage
+\vspace{1cm}
 \end{frame}
 
 \resetCountingSlides{3}
@@ -48,11 +57,11 @@
 \begin{figure}[ht]
   \centering
   \begin{minipage}[b]{0.45\linewidth}
-    \includegraphics[width=\linewidth]{data/presentation/antenna-1.jpg}
+    \includegraphics[width=\linewidth]{data/presentation/antenna-1.png}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.45\linewidth}
-    \includegraphics[width=\linewidth]{data/presentation/antenna-2.jpg}
+    \includegraphics[width=\linewidth]{data/presentation/antenna-2.png}
   \end{minipage}
 \end{figure}
 
@@ -95,7 +104,7 @@
 \frametitlecounted{Առավելություններ և թերություններ}
     Սկանավորման տեխնիկայի առավելություններն են՝
     \begin{itemize}
-        \item Մեծ տարածական լուծունակություն
+        \item Մեծ տարածական լուծունակություն \cite{yue2012nanoscalethermal}
     \end{itemize}
     Սկանավորման տեխնիկայի թերություններն են՝
     \begin{itemize}
@@ -123,11 +132,11 @@
 \end{frame}
 
 
-\resetCountingSlides{4}
+\resetCountingSlides{3}
 
 \begin{frame}
 \frametitlecounted{ՋԱՕԻՄ}
-    ՋԱՕԻՄ֊ի սզկբունքային սխեման՝
+    ՋԱՕԻՄ֊ի սկզբունքային սխեման՝ \cite{arakelyan2016teoim}
     \begin{figure}
         \centering
         \includegraphics[width=0.9\textwidth]{data/TEOIM/0.jpg}
@@ -163,47 +172,8 @@
     
 \end{frame}
 
-\begin{frame}
-\frametitlecounted{ՋԱՕԻՄ}
-    {\fontsize{10}{10} \selectfont Էլեկտրամագնիսական դաշտի կորուստները՝ \\
-    դիէլեկտրիկ միջավայրում էլեկտրական դաշտի համար՝}
-    \begin{flalign*}
-    q &= \frac{\omega}{2} \varepsilon'' |E|^2,
-    \end{flalign*} \\
-    {\fontsize{10}{10} \selectfont հաղորդիչ միջավայրում մագնիսական դաշտի համար՝}
-    \begin{flalign*}
-        q &= \frac{P_{av}}{V} = \frac{R_s}{2t}|H_t|^2, \\
-    \label{eq:TD_vs_Ht}
-    P_{av} &= \int\frac{R_s}{2}|H_t|^2dS, \\
-    R_s &= \sqrt{\frac{\omega \mu}{2\sigma}} = \frac{1}{\sigma \delta_s}:
-    \end{flalign*}
-    
-\end{frame}
 
-\resetCountingSlides{2}
-
-\begin{frame}
-\frametitlecounted{Տվյալների հավաքագրումը և վերամշակումը}
-{\fontsize{10}{1} \selectfont Տվյալների հավաքագրման քայլերի հերթականությունը՝}
-\vspace{-5pt}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{data/TEOIM/3.png}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitlecounted{Տվյալների հավաքագրումը և վերամշակումը}
-Հարթեցման և դիֆերենցման պրոցեսները՝
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1.0\textwidth]{data/presentation/interp-diff.png}
-\end{figure}
-
-\end{frame}
-
-\resetCountingSlides{3}
+\resetCountingSlides{5}
 
 \begin{frame}
 \frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
@@ -213,52 +183,14 @@
 }
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\textwidth]{data/waveguide/waveguide-scheme.png}
+    \includegraphics[width=0.9\textwidth]{data/presentation/waveguide-scheme.png}
 \end{figure}
 
 \end{frame}
 
-\begin{frame}
-\frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
-
-\begin{tblr}{
-  colspec = {X[c,m]X[c,m]},
-  rowsep = 6pt,
-  hlines = {1pt},
-  vlines = {1pt},
-}
-    Ինդիկատորի թաղանթի նյութը & Ինդիում֊անագի օքսիդ՝ In$_2$O$_3$\cdot SnO$_2$ (Indium-tin oxide - ITO) \\
-    Թաղանթի հաստությունը & 100 նմ \\
-    Ալիքատարի հեռավորությունը ինդիկատորից & 5 մմ \\
-    Ալիքատարի կտրվածքի չափերը & 22.86 մմ\times 10.16 մմ \\
-\end{tblr}
-
-\end{frame}
 
 \begin{frame}
 \frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
-
-{\fontsize{10}{10} \selectfont Փորձի ընթացքը՝ ամեն մուտքային հզորության համար տրված հաճախային տիրույթում 9 հաճախություններով էլեկտրամագնիսական ալիքների գեներացիայի դեպքում։}
-
-\begin{tblr}{
-  colspec = {X[0.5,c,m]X[c,m]},
-  rowsep = 6pt,
-  hlines = {1pt},
-  vlines = {1pt},
-}
-    Մուտքային հզորությունը & Չափված ալիքների հաճախությունները \\
-    0 dBm & [6; 14] ԳՀց, 1 ԳՀց քայլով \\
-    3 dBm & [6; 14] ԳՀց, 1 ԳՀց քայլով \\
-    6 dBm & [6; 14] ԳՀց, 1 ԳՀց քայլով \\
-\end{tblr}
-
-\end{frame}
-
-\resetCountingSlides{4}
-
-
-\begin{frame}
-\frametitlecounted{Փորձի արդյունքները}
 
 \begin{figure}[ht]
     \centering
@@ -275,7 +207,7 @@
 
 
 \begin{frame}
-\frametitlecounted{Փորձի արդյունքները}
+\frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
 
 \begin{figure}[ht]
     \centering
@@ -292,7 +224,7 @@
 
 
 \begin{frame}
-\frametitlecounted{Փորձի արդյունքները}
+\frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
 
 \begin{figure}[ht]
     \centering
@@ -309,7 +241,7 @@
 
 
 \begin{frame}
-\frametitlecounted{Փորձի արդյունքները}
+\frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
 
 {\fontsize{10}{10} \selectfont Ամեն մուտքային հաճախության համար միջինացված ինտենսիվության կախումը հաճախությունից՝}
 
@@ -329,6 +261,27 @@
         \item Հաճախության աճմանը զուգընթաց փոխվել է ինչպես դաշտի ինտենսիվությունը, այնպես էլ բաշխվածության տեսքը
         \item Առավելագույն ինտենսիվությունը գրանցվել է ալիքի 11 ԳՀց հաճախության դեպքում
     \end{itemize}
+\end{frame}
+
+
+\resetCountingSlides{1}
+
+\begin{frame}
+\frametitlecounted{Գրականություն}
+
+\renewcommand{\section}[2]{}
+
+\begin{thebibliography}{9}
+\setbeamertemplate{bibliography item}[text]
+
+\bibitem{yue2012nanoscalethermal}
+Yue, Y. \& Wang, X. Nanoscale thermal probing. Nano Reviews. 3, 11586 (2012).
+
+\bibitem{arakelyan2016teoim}
+H. Lee, S. Arakelyan, B. Friedman, K. Lee, Temperature and microwave near field imaging by thermo-elastic optical indicator microscopy, Sci. Rep. 6, 39696 (2016).
+
+\end{thebibliography}
+
 \end{frame}
 
 \end{document}
