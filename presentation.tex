@@ -19,10 +19,6 @@
 \author{Ուսանող՝ Սիմոնյանց Դավիթ}
 \date{}
 
-\makeatletter
-\renewcommand{\@cite}[1]{\textsuperscript{[#1]}}
-\makeatother
-
 \newcommand{\sectslides}{0}
 \newcounter{currslide}
 \newcommand{\resetCountingSlides}[1]{
@@ -33,6 +29,7 @@
 \newcommand{\showSlide}{\thecurrslide/\sectslides}
 \newcommand{\showCountSlide}{\showSlide \countSlide}
 \newcommand{\frametitlecounted}[1]{\frametitle{#1 \hfill \fontsize{10}{10} \selectfont \showCountSlide}}
+
 
 \begin{document}
 \hyphenpenalty=10000
@@ -104,7 +101,7 @@
 \frametitlecounted{Առավելություններ և թերություններ}
     Սկանավորման տեխնիկայի առավելություններն են՝
     \begin{itemize}
-        \item Մեծ տարածական լուծունակություն \cite{yue2012nanoscalethermal}
+        \item Մեծ տարածական լուծունակություն
     \end{itemize}
     Սկանավորման տեխնիկայի թերություններն են՝
     \begin{itemize}
@@ -136,7 +133,7 @@
 
 \begin{frame}
 \frametitlecounted{ՋԱՕԻՄ}
-    ՋԱՕԻՄ֊ի սկզբունքային սխեման՝ \cite{arakelyan2016teoim}
+    ՋԱՕԻՄ֊ի սկզբունքային սխեման՝
     \begin{figure}
         \centering
         \includegraphics[width=0.9\textwidth]{data/TEOIM/0.jpg}
@@ -256,7 +253,7 @@
 \begin{frame}
 \frametitlecounted{Ալիքատարային անտենայի հետազոտումը}
 
-{\fontsize{10}{10} \selectfont Միջինացված ինտենսիվության կախումը մուտքային հզորությունից՝ 8, 11 և 12 ԳՀց հաճախությունների դեպքում՝}
+{\fontsize{10}{10} \selectfont Միջինացված ինտենսիվության կախումը մուտքային հզորությունից՝ 8, 11 և 12 ԳՀց հաճախությունների դեպքում։}
 
 \begin{figure}[ht]
     \centering
@@ -280,20 +277,40 @@
 
 \resetCountingSlides{1}
 
+\newcommand{\bibfontsize}{\small}
+\let\oldbibitem\bibitem
+\renewcommand{\bibitem}[1]{\bibfontsize \selectfont \oldbibitem{#1}}
+
 \begin{frame}
 \frametitlecounted{Գրականություն}
 
 \renewcommand{\section}[2]{}
 
 \begin{thebibliography}{9}
+
 \setbeamertemplate{bibliography item}[text]
 
 \bibitem{yue2012nanoscalethermal}
+{\bibfontsize
 Yue, Y. \& Wang, X. Nanoscale thermal probing. Nano Reviews. 3, 11586 (2012).
-
+}
+\bibitem{xie1990picosecond}
+{\bibfontsize
+Xie, X., Simon, J. D. Picosecond circular dichroism spectroscopy: a Jones matrix
+analysis. J. Opt. Soc. Am. B 7, 1673 (1990).
+}
 \bibitem{arakelyan2016teoim}
+{\bibfontsize
 H. Lee, S. Arakelyan, B. Friedman, K. Lee, Temperature and microwave near field imaging by thermo-elastic optical indicator microscopy, Sci. Rep. 6, 39696 (2016).
-
+}
+\bibitem{barron2011thermalstress}
+{\bibfontsize
+Barron R. F., Barron B. R. Design for Thermal Stresses. Ch. 6 (Wiley, 2011).
+}
+\bibitem{chen2013itofabcrication}
+{\bibfontsize
+Chen Z, Li W, Li R, Zhang Y, Xu G, Cheng H. Fabrication of highly transparent and conductive indium-tin oxide thin films with a high figure of merit via solution processing.
+}
 \end{thebibliography}
 
 \end{frame}
