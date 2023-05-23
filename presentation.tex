@@ -6,6 +6,7 @@
 \usepackage{ragged2e}
 \usepackage{array}
 \usepackage{setspace}
+\usepackage{adjustbox}
 
 \usetheme{metropolis}
 \setbeamertemplate{footline}{}
@@ -53,9 +54,11 @@
 
 \begin{figure}[ht]
   \centering
+  \begin{adjustbox}{raise=20pt}
   \begin{minipage}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{data/presentation/antenna-1.png}
   \end{minipage}
+  \end{adjustbox}
   \hfill
   \begin{minipage}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{data/presentation/antenna-2.png}
@@ -277,40 +280,34 @@
 
 \resetCountingSlides{1}
 
-\newcommand{\bibfontsize}{\small}
+\newcommand{\bibfontsize}{\fontsize{8}{8} \selectfont}
 \let\oldbibitem\bibitem
-\renewcommand{\bibitem}[1]{\bibfontsize \selectfont \oldbibitem{#1}}
+\renewcommand{\bibitem}[1]{\bibfontsize \oldbibitem{#1}}
 
 \begin{frame}
 \frametitlecounted{Գրականություն}
 
 \renewcommand{\section}[2]{}
 
+\setbeamertemplate{bibliography item}[text]
 \begin{thebibliography}{9}
 
-\setbeamertemplate{bibliography item}[text]
-
 \bibitem{yue2012nanoscalethermal}
-{\bibfontsize
-Yue, Y. \& Wang, X. Nanoscale thermal probing. Nano Reviews. 3, 11586 (2012).
+{\bibfontsize Yue, Y. \& Wang, X. Nanoscale thermal probing. Nano Reviews. 3, 11586 (2012).
 }
 \bibitem{xie1990picosecond}
-{\bibfontsize
-Xie, X., Simon, J. D. Picosecond circular dichroism spectroscopy: a Jones matrix
-analysis. J. Opt. Soc. Am. B 7, 1673 (1990).
+{\bibfontsize Xie, X., Simon, J. D. Picosecond circular dichroism spectroscopy: a Jones matrix analysis. J. Opt. Soc. Am. B 7, 1673 (1990).
 }
 \bibitem{arakelyan2016teoim}
-{\bibfontsize
-H. Lee, S. Arakelyan, B. Friedman, K. Lee, Temperature and microwave near field imaging by thermo-elastic optical indicator microscopy, Sci. Rep. 6, 39696 (2016).
+{\bibfontsize H. Lee, S. Arakelyan, B. Friedman, K. Lee, Temperature and microwave near field imaging by thermo-elastic optical indicator microscopy, Sci. Rep. 6, 39696 (2016).
 }
 \bibitem{barron2011thermalstress}
-{\bibfontsize
-Barron R. F., Barron B. R. Design for Thermal Stresses. Ch. 6 (Wiley, 2011).
+{\bibfontsize Barron R. F., Barron B. R. Design for Thermal Stresses. Ch. 6 (Wiley, 2011).
 }
 \bibitem{chen2013itofabcrication}
-{\bibfontsize
-Chen Z, Li W, Li R, Zhang Y, Xu G, Cheng H. Fabrication of highly transparent and conductive indium-tin oxide thin films with a high figure of merit via solution processing.
+{\bibfontsize Chen Z, Li W, Li R, Zhang Y, Xu G, Cheng H. Fabrication of highly transparent and conductive indium-tin oxide thin films with a high figure of merit via solution processing. Langmuir. 2013 Nov 12;29(45):13836-42. doi: 10.1021/la4033282. Epub 2013 Oct 28. PMID: 24117323.
 }
+
 \end{thebibliography}
 
 \end{frame}
